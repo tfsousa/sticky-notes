@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "types": ["vite/client", "jest", "testing-library__jest-dom", "node"],
+    "paths": {
+      "~/*": ["*"]
+    }
+  },
+  "include": [
+    "src",
+    "src/app/features/user/presentation/components/.gitkeep",
+    "src/app/features/auth/presentation/components/.gitkeep",
+    "src/app/features/auth/domain/entities/.gitkeep",
+    "src/app/features/general/domain/entities/.gitkeep",
+    "src/app/features/general/presentation/components/.gitkeep"
+  ],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

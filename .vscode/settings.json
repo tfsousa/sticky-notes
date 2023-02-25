@@ -1,0 +1,14 @@
+{
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "editor.definitionLinkOpensInPeek": true,
+  "[sass]": {
+    "editor.tabSize": 2
+  },
+  "scss.validate": false,
+  "stylelint.validate": ["scss"]
+}

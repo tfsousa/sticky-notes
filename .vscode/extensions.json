@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "natqe.reload",
+    "syler.sass-indented",
+    "esbenp.prettier-vscode",
+    "formulahendry.auto-rename-tag",
+    "EditorConfig.EditorConfig",
+    "ms-azuretools.vscode-docker",
+    "rangav.vscode-thunder-client",
+    "naumovs.color-highlight",
+    "firsttris.vscode-jest-runner",
+    "stylelint.vscode-stylelint"
+  ]
+}

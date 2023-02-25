@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  padding: 1.5rem;
+  background: var(--colors-secondary95);
+  outline: 1px solid var(--colors-secondary20);
+
+  button {
+    margin-left: auto;
+  }
+}
