@@ -7,7 +7,7 @@
   "plugins": ["stylelint-scss"],
   "rules": {
     "custom-property-pattern": null,
-    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "selector-class-pattern": "(\\w+)([\\w-.]*)",
     "unit-allowed-list": [
       ["rem", "%", "s", "vh", "vw", "deg", "ms", "fr"],
       {
@@ -16,6 +16,7 @@
         }
       }
     ],
-    "color-hex-case": "upper"
+    "color-hex-case": "lower",
+    "selector-pseudo-class-no-unknown": null
   }
 }

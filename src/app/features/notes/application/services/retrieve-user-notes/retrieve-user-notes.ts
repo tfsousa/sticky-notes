@@ -4,6 +4,8 @@ import { HttpMethod } from '~/core/application/protocols'
 import { type ServiceCommand } from '~/core/domain/command/service-command'
 import { error, success } from '~/core/domain/either/either'
 
+import { type NoteModel } from '../../../domain'
+
 export class RetrieveUserNotes
   implements ServiceCommand<RetrieveUserNotes.Response>
 {
@@ -41,5 +43,5 @@ export namespace RetrieveUserNotes {
     userId: string
   }
 
-  export type Response = any
+  export type Response = NoteModel[]
 }

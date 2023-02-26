@@ -1,14 +1,14 @@
-# Frontend Boilerplate - React Web
+# Sticky Notes
 
-![](https://img.shields.io/badge/version-3-orange)
+![](https://img.shields.io/badge/version-1-yellow)
 [![react](https://img.shields.io/badge/react-18-blue?logo=react)](https://reactjs.org)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
 
 ## Navigation
 
-### Languages
+<!-- ### Languages -->
 
-[<img src='https://img.shields.io/badge/view%20in-pt--BR-green' alt='project-version' />](Readme.pt-BR.md)
+<!-- [<img src='https://img.shields.io/badge/view%20in-pt--BR-green' alt='project-version' />](Readme.pt-BR.md) -->
 
 ### Index
 
@@ -27,9 +27,9 @@
 1. [Service Implementation](#service-implementation)
    - [Handling http requests](#handling-http-requests)
    - [Service instantiation](#service-instantiation)
-1. [Tests](#tests)
+   <!-- 1. [Tests](#tests) -->
 1. [Roadmap](#roadmap)
-1. [Doubts and suggestions](#doubts-and-suggestions)
+<!-- 1. [Doubts and suggestions](#doubts-and-suggestions) -->
 
 ---
 
@@ -84,9 +84,9 @@ pnpm dev
 
 ## Folder Structure
 
-This project has a folder structure separated by features further isolate each piece of the application.
+This project has a folder structure separated by features to further isolate each piece of the application.
 
-This approach is somewhat similar to a micro front-end implementation, proving greater modularity to the application as a whole.
+This approach is similar to a micro front-end implementation, providing greater modularity to the application as a whole.
 
 ### Root
 
@@ -297,7 +297,7 @@ Only then the service will be ready to be used directly or through a state manag
 
 ---
 
-## Tests
+<!-- ## Tests
 
 Automated testing is a way to ensure the project quality and funtionaly in the long term. As the project grows, unwanted secondary effects from new implementations become more frequent and sometimes a bug may stay hidden for the entire development process, only to be found during production.
 
@@ -317,11 +317,20 @@ By default, during development the `test:cypress` command is used, which will op
 To be implemented...
 </blockquote>
 
----
+--- -->
 
 ## Roadmap
 
-The project will be constantly updated, with new features being added periodically.
+This is a small project but with a few features intended to be added at a later time. Specifically:
+
+- Mobile support
+- Dark mode
+- Multi user support and selection
+- Authentication
+- Better detection when hovering notes over the trash zone
+- Modal and snack notifications
+
+<!-- The project will be constantly updated, with new features being added periodically.
 
 Below are some that will be available soon:
 
@@ -330,6 +339,6 @@ Below are some that will be available soon:
 - Authentication by third-party apps (Google, Cognito, Firebase)
 - Upload files with Amazon S3
 - Internationalization
-- General documentation improvements.
+- General documentation improvements. -->
 
 ---

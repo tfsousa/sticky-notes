@@ -1,0 +1,93 @@
+.container {
+  position: absolute;
+  min-width: 8rem;
+  min-height: 10rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 2px #b1a8a8;
+  background: #fcfc4c;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease-in-out;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  .input {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: inherit;
+    resize: none;
+    background: transparent;
+    cursor: inherit;
+  }
+
+  &:active {
+    box-shadow: 0 15px 25px 0 #b1a8a8;
+    z-index: 5;
+    opacity: 0.7;
+
+    .input {
+      user-select: none;
+    }
+  }
+
+  .colors {
+    position: absolute;
+    right: 0;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .color {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 100%;
+    outline: 2px solid #fcfc4c;
+    outline-offset: -1px;
+    background: #fcfc4c;
+    margin-top: 0.5rem;
+
+    &.blue {
+      background: #8f8ffc;
+      outline-color: #8f8ffc;
+    }
+
+    &.green {
+      background: #9feb9f;
+      outline-color: #9feb9f;
+    }
+
+    &:hover {
+      outline-width: 3px;
+    }
+  }
+
+  &.blue {
+    background: #8f8ffc;
+  }
+
+  &.green {
+    background: #9feb9f;
+  }
+
+  .trash {
+    position: absolute;
+    border: none;
+    background: transparent;
+    outline: none;
+    height: fit-content;
+    width: fit-content;
+    margin: 0;
+    padding: 0.25rem 0;
+    right: 0;
+    cursor: pointer;
+  }
+}

@@ -1,22 +1,98 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   padding: 1rem;
 
   h1 {
     text-align: center;
-    max-width: 25rem;
+    margin: 0 auto;
   }
 
-  .buttonWrapper {
-    display: flex;
-    margin-top: 3rem;
+  button {
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
 
-    button {
-      margin-right: 1rem;
+    &:hover,
+    &:active {
+      background: transparent;
+    }
+  }
+
+  .add {
+    border: 1px solid #ffff3994;
+    background: #ffff395b;
+
+    &:hover,
+    &:active {
+      background: #ffff3994;
+    }
+  }
+
+  .save {
+    border: 1px solid #51f15194;
+    background: #51f1515b;
+
+    &:hover,
+    &:active {
+      background: #51f15194;
+    }
+  }
+
+  .load {
+    border: 1px solid #4444fa94;
+    background: #4444fa5b;
+
+    &:hover,
+    &:active {
+      background: #4444fa94;
+    }
+  }
+
+  .notes-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+    background: #f8ebeb57;
+    box-shadow: 3px 10px 10px 8px #eee5e5;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .trash-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: auto;
+    border: 1px dotted gray;
+    border-radius: 4px;
+    z-index: 10;
+    user-select: none;
+
+    svg {
+      margin-top: 0.5rem;
+    }
+
+    &.hovering {
+      color: #ff3636;
+      border-color: #ff3636;
+      background: #ffbaba4f;
+      outline: 1px dotted #ff3636;
     }
   }
 }

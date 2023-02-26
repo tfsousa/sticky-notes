@@ -1,17 +1,16 @@
 import { RequestResponse } from '~/core/application/http-response/http-response'
-import type { CacheStorage, HttpClient } from '~/core/application/protocols'
-import { HttpMethod } from '~/core/application/protocols'
+import { HttpMethod, type HttpClient } from '~/core/application/protocols'
 import { type ServiceCommand } from '~/core/domain/command/service-command'
 import { error, success } from '~/core/domain/either/either'
+
+import { type NoteModel } from '../../../domain'
 
 export class PersistUserNotes
   implements ServiceCommand<PersistUserNotes.Response>
 {
   constructor(
     private readonly httpClient: HttpClient<PersistUserNotes.Response>,
-    private readonly url: string,
-    private readonly cacheStorage: CacheStorage,
-    private readonly tokenKey: string
+    private readonly url: string
   ) {}
 
   async execute({
@@ -21,11 +20,11 @@ export class PersistUserNotes
     ServiceCommand.Response<PersistUserNotes.Response>
   > {
     const url = `${this.url}/${userId}`
-    const token = `${this.tokenKey}/${userId}`
 
     const httpResponse = await this.httpClient.request({
       method: HttpMethod.PUT,
-      url
+      url,
+      body: { notes }
     })
 
     const responseOrError = RequestResponse.handle(httpResponse)
@@ -36,8 +35,6 @@ export class PersistUserNotes
 
     const response = responseOrError.value.response
 
-    this.cacheStorage.set(token, JSON.stringify(notes))
-
     return success(response)
   }
 }
@@ -45,7 +42,7 @@ export class PersistUserNotes
 export namespace PersistUserNotes {
   export type Params = {
     userId: string
-    notes: any[]
+    notes: NoteModel[]
   }
 
   export type Response = void

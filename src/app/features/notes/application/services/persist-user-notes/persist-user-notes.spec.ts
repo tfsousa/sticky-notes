@@ -18,12 +18,7 @@ const makeSut = () => {
 
   const notesMock = [{}]
 
-  const sut = new PersistUserNotes(
-    httpClientSpy,
-    url,
-    cacheStorageSpy,
-    tokenKey
-  )
+  const sut = new PersistUserNotes(httpClientSpy, url)
 
   return {
     requestResponseHandleSpy,
@@ -51,21 +46,8 @@ describe('PersistUserNotes', () => {
 
     expect(httpClientSpy.request).toHaveBeenCalledWith({
       method: HttpMethod.PUT,
-      url: apiUrl
+      url: apiUrl,
+      body: { notes: notesMock }
     })
-  })
-
-  it('Should call cacheStorage.set() with correct values', async () => {
-    const { sut, tokenKey, cacheStorageSpy, notesMock } = makeSut()
-
-    const userId = faker.random.alphaNumeric(10)
-    const token = `${tokenKey}/${userId}`
-
-    await sut.execute({ userId, notes: notesMock })
-
-    expect(cacheStorageSpy.set).toHaveBeenCalledWith(
-      token,
-      JSON.stringify(notesMock)
-    )
   })
 })
