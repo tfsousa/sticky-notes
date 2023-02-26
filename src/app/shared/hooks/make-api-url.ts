@@ -1,1 +1,2 @@
-export const makeApiUrl = (route: string) => `${process.env.API_URL}/${route}`
+export const makeApiUrl = (route: string) =>
+  `${import.meta.env.API_URL as string}/${route}`

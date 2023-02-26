@@ -9,20 +9,12 @@ import { LayoutProvider, ProviderComposition } from '../providers'
 import { appRoutes } from './router-config'
 
 const RouteElements = () => {
+  const getPath = (path?: string) => `${import.meta.env.BASE_URL}${path ?? '/'}`
   const routes = createRoutesFromElements(
-    appRoutes.map(({ layout, element, ...props }, index) => (
+    appRoutes.map(({ layout, element, path }, index) => (
       <Route
         key={index}
-        index={props?.index}
-        action={props?.action}
-        caseSensitive={props?.caseSensitive}
-        errorElement={props?.errorElement}
-        handle={props?.handle}
-        hasErrorBoundary={props?.hasErrorBoundary}
-        id={props?.id}
-        loader={props?.loader}
-        path={props?.path}
-        shouldRevalidate={props?.shouldRevalidate}
+        path={getPath(path)}
         element={
           <LayoutProvider layoutOptions={layout}>{element}</LayoutProvider>
         }

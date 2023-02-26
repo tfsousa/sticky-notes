@@ -3,7 +3,7 @@ import { type ServiceCommand } from '~/core/domain/command/service-command'
 import { type DomainException } from '~/core/domain/exceptions'
 
 const logError = (error: any) => {
-  process.env.NODE_ENV !== 'production' && console.error(error)
+  import.meta.env.DEV && console.error(error)
 }
 
 export const baseQueryAdapter: BaseQueryFn<
