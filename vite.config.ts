@@ -4,6 +4,7 @@ import EnvironmentPlugin from 'vite-plugin-environment'
 import { fileURLToPath } from 'url'
 
 export default defineConfig({
+  base: '/sticky-notes/',
   plugins: [react(), EnvironmentPlugin(['API_URL'])],
   server: {
     port: 3000
